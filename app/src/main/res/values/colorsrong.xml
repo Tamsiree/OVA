@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- -->
+    <color name="group_list_black_textview">#353535</color>
+    <color name="group_list_gray">#999999</color>
+    <color name="seal_bg">#f0f0f6</color>
+
+
+    <!--actionbar-->
+    <!---->
+
+    <color name="main_theme_color">#0195ff</color>
+
+    <color name="press">#e8e8e8</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="text_line_color">#dfdfdd</color>
+    <color name="text_color">#353535</color>
+
+    <!--SWITCH-->
+
+    <color name="ac_filter_string_color">#0099ff</color>
+</resources>

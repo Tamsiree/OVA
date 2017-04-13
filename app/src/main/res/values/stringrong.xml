@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--主页-->
+    <string name="main_customer">意见反馈</string>
+    <string name="private_chat">发起聊天</string>
+    <string name="group_chat">创建群组</string>
+    <string name="add_contacts">添加好友</string>
+
+
+    <!--register activity -->
+    <string name="login_success">"登录成功"</string>
+
+    <!--设置-->
+    <string name="join_the_blacklist">加入黑名单</string>
+
+
+    <!-- friend list -->
+
+
+    <!--actionbar title -->
+    <string name="de_actionbar_sub_defult">"聊天"</string>
+    <string name="de_actionbar_system">"系统消息"</string>
+
+    <string name="de_dialog_item_message_delete">删除消息</string>
+
+
+    <!-- Aming 10月重构版 -->
+    <string name="start_chat">发起会话</string>
+    <string name="network_not_available">网络不可用</string>
+    <string name="login_api_fail">登录请求接口失败</string>
+    <string name="sync_userinfo_api_fail">同步用户信息接口请求失败</string>
+    <string name="get_token_api_fail">获取token请求接口失败</string>
+    <string name="phone_or_psw_error">手机或者密码错误</string>
+    <string name="send_code">发送验证码</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="No_friends">暂无好友</string>
+    <string name="Search">搜索</string>
+    <string name="new_friends">新的朋友</string>
+    <string name="group">群组</string>
+    <string name="public_service">公众号</string>
+    <string name="check_network">请检查网络</string>
+    <string name="agreed_friend">已同意好友关系</string>
+    <string name="agree">接&#160;&#160;&#160;受</string>
+    <string name="request">已请求</string>
+    <string name="ignore">已忽略</string>
+    <string name="added">已添加</string>
+    <string name="deleted">已删除</string>
+    <string name="original_password">原密码不能为空</string>
+    <string name="new_password_not_null">新密码不能为空</string>
+    <string name="confirm_password_not_null">确认密码不能为空</string>
+    <string name="original_password_mistake">原密码填写错误</string>
+    <string name="passwords_invalid">密码必须为6-16位字符，区分大小写</string>
+    <string name="passwords_do_not_match">填写的确认密码与新密码不一致</string>
+    <string name="original_password_text">初始密码</string>
+    <string name="new_password">新密码</string>
+    <string name="confirm_new_password">确认新密码</string>
+    <string name="user_details">用户详情</string>
+    <string name="black_state">黑名单状态</string>
+    <string name="add_friend">加为好友</string>
+    <string name="add_text">加好友信息...</string>
+    <string name="request_success">请求成功</string>
+
+    <string name="start_voice">语音通话</string>
+    <string name="start_video">视频聊天</string>
+    <string name="update_app_model_prepare">准备下载</string>
+    <string name="update_app_model_progress">正在下载 %1$d%2$s</string>
+    <string name="update_app_model_success">下载成功(点击安装)</string>
+    <string name="update_app_model_error">下载失败(点击浏览器下载)</string>
+    <string name="setdisplayname">设置备注</string>
+    <string name="ac_contact_nick_name">昵称:</string>
+
+
+    <string name="offline">离线</string>
+    <string name="pc_online">电脑在线</string>
+    <string name="phone_online">手机在线</string>
+    <string name="read_receipt_detail">回执详情</string>
+    <string name="read_receipt_unread_persons">%1$d人未读</string>
+    <string name="read_receipt_read_persons">%1$d人已读</string>
+    <string name="read_receipt_no_person_read">全部未读</string>
+    <string name="read_receipt_no_person_unread">全部已读</string>
+    <string name="des_add_friend_to_black_list">你将不再收到对方的消息</string>
+
+
+    <string name="ac_new_friend_list_no_data">暂无数据</string>
+
+
+    <string name="ac_note_info_name">备注名</string>
+    <string name="ac_note_info">备注信息</string>
+    <string name="ac_note_info_save">保存</string>
+
+    <string name="contact_notification_someone_agree_your_request">%1$s已同意你的好友请求</string>
+    <string name="contact_notification_agree_your_request">对方已同意你的好友请求</string>
+
+    <string name="layout_dialog_loading">正在加载</string>
+    <string name="item_filter_group_list_include">包含：</string>
+    <string name="rs_ada_user_ship_add">已添加</string>
+</resources>

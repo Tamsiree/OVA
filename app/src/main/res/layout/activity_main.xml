@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.vondear.ova.activity.ActivityMain">
+
+    <FrameLayout
+        android:id="@+id/fl_change"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/app_7"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#E45171"
+        app:tl_iconVisible="false"
+        app:tl_indicator_color="#eeeeee"
+        app:tl_indicator_corner_radius="1.5dp"
+        app:tl_indicator_gravity="TOP"
+        app:tl_indicator_height="3dp"
+        app:tl_indicator_style="TRIANGLE"
+        app:tl_indicator_width="10dp"
+        app:tl_textsize="14sp"/>
+</LinearLayout>

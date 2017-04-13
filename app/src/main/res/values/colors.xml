@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FD4C5B</color>
+    <color name="colorPrimaryDark">#FD4C5B</color>
+    <color name="colorAccent">#FD4C5B</color>
+
+    <color name="mi_green">#52BA97</color>
+</resources>

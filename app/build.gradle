@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'dexknifePlus'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.vondear.ova"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+
+    dexKnife {
+        //必选参数
+        enabled true //if false,禁用分包插件
+        //可选参数
+        //1.如果没有可选参数，将根据enabled决定是否分包。
+        //2.如果有可选参数，需满足必选参数和可选参数的条件才允许分包
+        productFlavor 'mock'
+        buildType 'debug'
+
+        /*
+        *eg:当前productFlavors = dev，buildType = debug，
+        *参数组合1：enabled = true，productFlavor = dev，buildType = debug 分包
+        *参数组合2：enabled = true，productFlavor = mock，buildType = debug 不分包
+        *参数组合1：enabled = true，buildType = debug 所有buildType = debug分包
+        *参数组合1：enabled = true，productFlavor = dev 所有productFlavor = dev分包
+        * */
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'com.android.support:cardview-v7:25.3.0'
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support:design:25.3.0'
+    compile 'com.github.vondear:RxTools:v1.6.4'
+    compile 'com.android.support:support-v4:25.3.0'
+    compile 'com.jakewharton:butterknife:8.2.1'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.0@aar'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.lzy.net:okgo:2.1.3'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.6.7'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    compile 'com.orhanobut:logger:1.15'
+
+    compile 'com.yalantis:ucrop:2.2.0'
+    compile 'cn.rongcloud.android:IMLib:2.8.4'
+    compile 'cn.rongcloud.android:IMKit:2.8.4'
+    compile 'cn.rongcloud.android:CallLib:2.8.4'
+    compile 'cn.rongcloud.android:CallKit:2.8.4'
+//    compile 'cn.rongcloud.android:RedPacket:2.8.4'
+    compile 'com.facebook.stetho:stetho:1.4.1'
+    compile 'com.alibaba:fastjson:1.2.21'
+    compile 'de.greenrobot:greendao:1.3.7'
+    compile 'de.greenrobot:greendao-generator:1.3.1'
+//    compile 'com.android.support:multidex:1.0.1'
+    compile 'fm.jiecao:jiecaovideoplayer:2.0'
+    compile 'org.jsoup:jsoup:1.7.3'
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+}
+
+apply plugin: 'com.google.gms.google-services'

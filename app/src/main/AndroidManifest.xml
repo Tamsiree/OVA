@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.vondear.ova">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- 外部存储 -->
+
+    <uses-permission android:name="android.permission.VIBRATE"/> <!-- 许可振动 -->
+
+    <uses-permission android:name="android.permission.FLASHLIGHT"/> <!-- 打开闪光灯 -->
+
+    <uses-permission android:name="android.permission.CAMERA"/> <!-- 许可使用照相机 -->
+
+    <uses-feature android:name="android.hardware.camera"/> <!-- 许可调用相机硬件 -->
+
+    <uses-feature android:name="android.hardware.camera.autofocus"/> <!-- 许可调用相机自动对焦 -->
+
+
+    <!-- ⼩米 配置开始 < -->
+    <permission
+        android:name="cn.rongcloud.im.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="cn.rongcloud.im.permission.MIPUSH_RECEIVE"/>
+    <!-- ⼩米 配置结束 < -->
+    <!-- GCM 配置开始 < -->
+    <permission
+        android:name="cn.rongcloud.im.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="cn.rongcloud.im.permission.C2D_MESSAGE"/>
+    //----------------------------------------------------------------------------------------------
+
+    <!-- GCM 配置结束 < -->
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.ActivityLogin"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name=".activity.ActivitySplash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ActivityMain"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="com.vondear.ova"
+                    android:pathPrefix="/push_message"
+                    android:scheme="rong"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ActivitySet"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".rong.activity.NewFriendListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".rong.activity.UserDetailActivity">
+        </activity>
+        <activity android:name=".rong.activity.NoteInformationActivity">
+        </activity>
+
+        <meta-data
+            android:name="RONG_CLOUD_APP_KEY"
+            android:value="n19jmcy59f1q9"/>
+        <!-- android:value="y745wfm8y71gv"/> -->
+        <activity android:name=".rong.activity.ConversationActivity">
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="com.vondear.ova"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".rong.activity.ReadReceiptDetailActivity">
+        </activity>
+        <activity android:name=".activity.ActivityPlayer">
+        </activity>
+    </application>
+
+</manifest>
